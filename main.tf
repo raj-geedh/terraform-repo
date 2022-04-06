@@ -6,3 +6,10 @@ Name="rajesh-vpc"
 }
 }
 
+resource "aws_internet_gateway" "rajesh-gateway" {
+vpc_id = "${aws_vpc.rajesh-vpc.id}"
+tags = {
+Name="rajesh-gateway"
+}
+}
+
